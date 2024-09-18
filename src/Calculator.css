@@ -1,0 +1,111 @@
+/* Overall calculator container */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    background: #222;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    padding: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Heading style */
+.heading {
+    color: #0ff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Display container */
+.display {
+    background: #000;
+    color: #0ff;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    border-radius: 10px; /* Rounded corners for visual appeal */
+}
+
+/* Previous input style */
+.previous-input {
+    font-size: 1rem; /* Smaller font size for previous input */
+    color: #0ff;
+    text-align: right;
+    padding: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Current input style */
+.current-input {
+    font-size: 2rem; /* Larger font size for current input */
+    text-align: right;
+    padding: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Error styling for current input */
+.current-input.error {
+    color: red;
+}
+
+/* Button grid layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.btn {
+    background: #111;
+    border: none;
+    color: #0ff;
+    font-size: 1.5rem;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Button active state */
+.btn:active {
+    background: #00f;
+    transform: scale(0.95);
+}
+
+/* Specific button styles */
+.ac {
+    background: #f00;
+}
+
+.del {
+    background: #f80;
+}
+
+.operator {
+    background: #00f;
+}
+
+.equals {
+    background: #0f0;
+    color: #000;
+    grid-column: span 2; /* Make the equals button span two columns */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background: #333;
+}
